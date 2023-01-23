@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Codex.java&apos; to &apos;fr.uge.tp9.ex1.Codex.java&apos;&#x0D;&#x0A;- Original project: &apos;tp9&apos;&#x0D;&#x0A;- Destination element: &apos;fr.uge.tp9.ex1.Codex.java&apos;&#x0D;&#x0A;- Original element: &apos;fr.uge.tp9.ex1.Codex.java&apos;" description="Copy compilation unit" destination="/src&lt;fr.uge.tp9.ex1{Codex.java" element1="/src&lt;fr.uge.tp9.ex1{Codex.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1669299086318" units="1" version="1.0"/>
+</session>

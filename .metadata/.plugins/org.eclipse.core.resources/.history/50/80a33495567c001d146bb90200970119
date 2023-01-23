@@ -1,0 +1,37 @@
+package fr.uge.tp11.ex2;
+
+public class RandomNumberGenerator {
+  private AtomicLong x = new AtomicLong();
+  
+  public RandomNumberGenerator(long seed) {
+    if (seed == 0) {
+      throw new IllegalArgumentException("seed == 0");
+    }
+    x = seed;
+  }
+  
+  public long next() {  // Marsaglia's XorShift
+    x ^= x >>> 12;
+    x ^= x << 25;
+    x ^= x >>> 27;
+    return x * 2685821657736338717L;
+  }
+  
+  public static void main(String[] args) {
+    RandomNumberGenerator rng = new RandomNumberGenerator(1);
+    for(var i = 0; i < 5_000; i++) {
+      System.out.println(rng.next());
+    }
+  }
+}
+
+//Expliquer comment fonctionne un générateur pseudo-aléatoire et pourquoi l'implantation ci-dessous n'est pas thread-safe.
+/*
+ * Un générateur pseudo-aléatoire fonctionne avec une seed que l'on choisis au début 
+ * 
+ * ici l'implantation n'est pas thread safe car on accede au champ x alors qu'il n'est pas volatile
+ */
+
+//Utiliser la classe AtomicLong et sa méthode compareAndSet pour obtenir une implantation lock-free du générateur pseudo-aléatoire.
+
+//Simplifiez votre code en utilisant la méthode updateAndGet de la classe AtomicLong.
